@@ -25,24 +25,32 @@
             <li id="exit" class="exit-btn hide-desktop">
               <img src="images/exit.svg" alt="exit menu" />
             </li>
+            
             <li><a href="#">home</a></li>
             <li><a href="#">my work</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
+            
           </ul>
         </nav>
-      </header>
-
-      <section>
-        <img src="images/bigpic.jpg" alt="server graphic" class="server" />
-
-        <h1>
-          Hi! I`m John Paul Belamide.
-        </h1>
-        <p class="subhead">
-          Game Developer/ Web Design/ Database/ Gamer/ GFX Artist
-        </p>
+      </header>       
+      <section id="text">
+        <img src="images/bigpic.jpg" alt="server graphic" class="server" id="picHover"/>
+        <div class="bg" >
+          <video autoplay muted loop id="myVideo" class="hide-video" >
+            <source src="video/MilkyWay1H264.mp4" type="video/mp4">
+          </video>        
+        </div>
+        <div id="textBlack">
+          <h1>
+            Hi! I`m John Paul Belamide.
+          </h1>
+          <p class="subhead">
+            Game Developer/ Web Design/ Database/ Gamer/ GFX Artist
+          </p>        
+        </div>
       </section>
+
     </div>
 
     <div class="blue-container">
@@ -137,6 +145,9 @@
       var menu = document.getElementById("menu");
       var nav = document.getElementById("nav");
       var exit = document.getElementById("exit");
+      var pic = document.getElementById("picHover");
+      var actualVid = document.getElementById("myVideo");
+      var text = document.getElementById("textBlack");
 
       menu.addEventListener("click", function(e) {
         nav.classList.toggle("hide-mobile");
@@ -146,7 +157,19 @@
       exit.addEventListener("click", function(e) {
         nav.classList.add("hide-mobile");
         e.preventDefault();
+        
       });
+
+      pic.addEventListener('mouseover',function(){
+        actualVid.classList.toggle("hide-video");
+        text.style.color = "white";
+      }); 
+
+      pic.addEventListener('mouseleave',function(){
+        actualVid.classList.add("hide-video");
+        text.style.color = "black";
+      });
+          
     </script>
 
     <!-- Load React. -->
