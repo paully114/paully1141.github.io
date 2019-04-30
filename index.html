@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Paul Belamide - Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="images/mylogo.png" alt="23andfour logo" class="logo" />
+
+        <nav>
+          <a href="#" class="hide-desktop">
+            <img
+              src="images/ham.svg"
+              alt="toggle menu"
+              class="menu"
+              id="menu"
+            />
+          </a>
+          <ul class="show-desktop hide-mobile" id="nav">
+            <li id="exit" class="exit-btn hide-desktop">
+              <img src="images/exit.svg" alt="exit menu" />
+            </li>
+            <li><a href="#">home</a></li>
+            <li><a href="#">my work</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section>
+        <img src="images/bigpic.jpg" alt="server graphic" class="server" />
+
+        <h1>
+          Hi! I`m John Paul Belamide.
+        </h1>
+        <p class="subhead">
+          Game Developer/ Web Design/ Database/ Gamer/ GFX Artist
+        </p>
+      </section>
+    </div>
+
+    <div class="blue-container">
+      <div class="container">
+        <ul>
+          <li>
+            <img src="images/game-development (2).svg" alt="Calendar icon" />
+            <h3>Game Developer</h3>
+            <p>
+              My research project is all about a game that help Grade 6 to their
+              vocabulary. In this development I use C# Language.
+            </p>
+          </li>
+          <li>
+            <img src="images/web-programming.svg" alt="Calendar icon" />
+            <h3>Web Developer</h3>
+            <p>
+              It's still quite new to me. I'm still learning this language, but
+              I`m confident that I can learn in a short time.
+            </p>
+          </li>
+          <li>
+            <img src="images/website-design-symbol.svg" alt="Calendar icon" />
+            <h3>Design</h3>
+            <p>
+              In my free time I usually go to YouTube to learn some new
+              techniques using Adobe Photoshop, Adobe After Effects and Premiere
+              Pro.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gray-container"></div>
+    <h4>What if I rate my skills?</h2>
+      <div class="bars">
+      <section>
+        <div class="cs-bar-2 bar">
+          <span data-label="C#"></span>
+        </div>
+      </section>
+      <section>
+          <div class="jv-bar-2 java bar">
+            <span data-label="Java"></span>
+          </div>
+        </section>
+        <section>
+          <div class="js-bar-2 js bar">
+            <span data-label="JavaScript"></span>
+          </div>
+        </section>
+        <section>
+          <div class="css-bar-2 css bar">
+            <span data-label="CSS"></span>
+          </div>
+        </section>
+        <section>
+          <div class="ms-bar-2 mysql bar">
+            <span data-label="MySql"></span>
+          </div>
+        </section>
+        <section>
+          <div class="ps-bar-2 ps bar">
+            <span data-label="Adobe Photoshop"></span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Check my CV!</h2>
+      <a href="#" class="cta">Download Here.</a>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="container">
+          <a href="#">
+            <img src="images/mylogo.png" class="logo2" alt="logo2" />
+          </a>
+          <p class="address">Cainta,Rizal , 1900<br />PH</p>
+          <ul class="footer-links">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var menu = document.getElementById("menu");
+      var nav = document.getElementById("nav");
+      var exit = document.getElementById("exit");
+
+      menu.addEventListener("click", function(e) {
+        nav.classList.toggle("hide-mobile");
+        e.preventDefault();
+      });
+
+      exit.addEventListener("click", function(e) {
+        nav.classList.add("hide-mobile");
+        e.preventDefault();
+      });
+    </script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+  </body>
+</html>
